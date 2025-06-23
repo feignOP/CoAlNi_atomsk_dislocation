@@ -1,10 +1,11 @@
 #!/bin/bash
+
 # ================================================================
 # Author: Anand Mathew
 # ================================================================
 
 # === Generate dislocated CoAl layer ===
-atomsk --create CsCl 2.876 Co Al orient [001] [1-10] [110] top.cfg \
+atomsk --create CsCl 2.876 Co Al orient [001] [1-10] [110] coal.cfg \
 -dup 82 82 32 \
 -orient [001] [1-10] [110] [100] [010] [001] \
 -disloc loop 0.31*box 0.65*box 0.22*box Y 41 2.876 0 0 0.33 \
@@ -51,7 +52,7 @@ atomsk --create fcc 3.52 Ni orient [-1-12] [1-10] [111] ni.cfg -dup 82 140 6 \
 -alignx
 
 # === Merge alternating 3 CoAl and 2 Ni layers in the z-direction ===
-atomsk --merge z 5 top.cfg ni.cfg top.cfg ni.cfg top.cfg final_structure.cfg
+atomsk --merge z 5 coal.cfg ni.cfg coal.cfg ni.cfg coal.cfg final_structure.cfg
 
 # === Cut a cylindrical region from the merged structure ===
 atomsk final_structure.cfg \
