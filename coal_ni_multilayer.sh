@@ -1,13 +1,10 @@
 #!/bin/bash
+
 # ================================================================
 # Author: Anand Mathew
-# Description:
-#   Generates a cylindrical CoAl/Ni layered structure with Atomsk.
-#   The top layer is CoAl (CsCl structure), and the bottom is Ni (FCC).
-#   The final structure is cylindrical and ready for LAMMPS simulations.
 # ================================================================
 
-# === Generate dislocated CoAl layer ===
+# === Generate CoAl layer ===
 atomsk --create CsCl 2.876 Co Al orient [001] [1-10] [110] coal.cfg -dup 82 82 32
 
 # === Generate FCC Ni layer ===
