@@ -1,6 +1,6 @@
 # CoAl / Ni Multilayer Structure and Dislocation Generator
 
-This repository contains three shell scripts to generate multilayer structures of CoAl and Ni using [Atomsk](https://atomsk.univ-lille.fr/), with or without dislocation loops. The output files are suitable for visualization or atomistic simulations using LAMMPS.
+This repository contains two shell scripts to generate multilayer structures of CoAl and Ni using [Atomsk](https://atomsk.univ-lille.fr/), with dislocation loops. The output files are suitable for visualization or atomistic simulations using LAMMPS.
 
 ---
 
@@ -18,18 +18,7 @@ Generates a **single-material CoAl multilayer** structure with **random dislocat
 
 ---
 
-### 2. `coal_ni_multilayer.sh`
-
-Creates a **clean, defect-free multilayer** structure of **CoAl/Ni**.
-
-- 🧱 Structure: Alternating CoAl (CsCl) and Ni (FCC) layers
-- 🔁 Multilayered stack without dislocations
-- ➰ Dislocations: None
-- 🧭 Orientations: CoAl `[001] [1-10] [110]` and Ni `[-1-12] [1-10] [111]` 
-
----
-
-### 3. `coal_ni_multilayer_dislcoation.sh`
+### 2. `coal_ni_multilayer_dislcoation.sh`
 
 Builds a **CoAl/Ni multilayer** with **dislocation loops** inserted at multiple interfaces.
 
